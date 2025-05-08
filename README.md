@@ -21,15 +21,16 @@ Human-in-the-Loop-AI-Receptionist-System/
 
 ├── backend/              # FastAPI backend
 
-│   ├── main.py           # API endpoints
-
-│   ├── kb_initializer.py          # Knowledge Base (simple JSON file)
-
-│   ├── firebase_test.json           # In-memory request store (simulated)
-
-│   ├── firebase-config.json  # For Firebase (if needed, use `.gitignore`)
-
-|     ├── livekit_handler.py           # Stimulated Audio Call and
+| ├── .env
+| ├── .gitignore
+| ├── firebase-config.json
+| ├── firebase_test.py
+| ├── follow_up.py
+| ├── kb_initializer.py
+| ├── livekit_handler.py
+| ├── main.py
+| ├── requirements.txt
+| ├── test_firebase.py
 
 │   └── ...
 
@@ -113,7 +114,7 @@ graph TD
 ```bash
 cd backend
 pip install -r requirements.txt
-uvicorn main:app --reload
+python uvicorn main:app --reload
 ```
 
 Runs at: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
